@@ -1,0 +1,42 @@
+{% extends "layouts/layouts.html" %}
+{% block content %}
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Cost Estimator Form:</h3>
+    </div>
+    <div class="panel-body">
+
+        <form id="estimator">
+            <div class="form-group numberofstudy required">
+                <label class='control-label' for="numberofstudy">Current Number of study per day</label>
+                <input type="number" class="form-control" id="numberofstudy" placeholder="Number of study per day" required>
+            </div>
+            <div class="form-group studygrowth required">
+                <label class='control-label' for="studygrowth">Number of Study Growth per month in %</label>
+                <input type="number" class="form-control" id="studygrowth" placeholder="Study Growth per month" required>
+            </div>
+            <div class="form-group forecast required">
+                <label class='control-label' for="forecast">Number of months to forecast</label>
+                <input type="number" class="form-control" id="forecast" placeholder="Number of months to forecast" required>
+            </div>
+            <button type="submit" id="estimator-form-submit" class="btn btn-default">Submit</button>
+        </form>
+
+    </div>
+</div>
+
+<div class="panel panel-success">
+    <div class="panel-heading">
+        <h3 class="panel-title">Results</h3>
+    </div>
+    <div class="panel-body"></div>
+</div>
+<div class="panel panel-danger">
+    <div class="panel-heading">
+        <h3 class="panel-title">Failure</h3>
+    </div>
+    <div class="panel-body"></div>
+    <div tabindex="0"></div>
+</div>
+
+{% endblock %}

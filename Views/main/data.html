@@ -1,0 +1,17 @@
+{% block content %}
+    <table class="table table-striped table-hover">
+        <tr>
+            <th>Month Year</th>
+            <th>Number of Studies</th>
+            <th>Forcasted cost in Dollars</th>
+        </tr>
+    {% for row in results %}
+        <tr>
+            <td>{{row.date}}</td>
+            <td>{{row.studies}}</td>
+            <td>{{row.cost}}</td>
+        </tr>
+    {% endfor %}
+    </table>
+    <div tabindex="0"></div>
+{% endblock %}
